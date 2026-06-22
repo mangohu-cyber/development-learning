@@ -46,12 +46,14 @@
 ## 数据位置
 
 ```text
-C:\Users\Seer\.agents\development-learning\
+<AGENTS_HOME>\development-learning\
   index.md
   skill-candidates.md
   development-learning-evolution.md
   reviews\
 ```
+
+`<AGENTS_HOME>` 表示当前 agent 的个人配置根目录，通常是包含 `skills\` 目录的上一级目录。
 
 ## 使用建议
 
@@ -87,5 +89,5 @@ C:\Users\Seer\.agents\development-learning\
 修改或验证该 skill 时，可读取：
 
 ```text
-C:\Users\Seer\.agents\skills\development-learning\references\test-scenarios.md
+<AGENTS_HOME>\skills\development-learning\references\test-scenarios.md
 ```

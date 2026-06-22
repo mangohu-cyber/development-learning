@@ -11,11 +11,13 @@ description: Use when a development task, debugging session, design discussion, 
 
 Use this skill to turn development work into evidence-based learning records. Capture reusable thinking, observed process risks, and skill evolution candidates without storing full chat logs or making personality judgments.
 
-Learning data lives in:
+Learning data lives under the agent's personal data root:
 
 ```text
-C:\Users\Seer\.agents\development-learning\
+<AGENTS_HOME>\development-learning\
 ```
+
+Resolve `<AGENTS_HOME>` from the current agent environment. For Codex-style personal skills, it is usually the parent directory that contains `skills\`.
 
 Read `references/usage.md` when the user asks how to use this skill, asks for the skill usage document, or needs examples of commands and expected behavior.
 
@@ -46,7 +48,7 @@ If the user says "优化 development-learning", "修改这个复盘 skill", or r
 Maintain these files:
 
 ```text
-C:\Users\Seer\.agents\development-learning\
+<AGENTS_HOME>\development-learning\
   index.md
   skill-candidates.md
   development-learning-evolution.md
