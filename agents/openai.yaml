@@ -1,0 +1,4 @@
+interface:
+  display_name: "Development Learning"
+  short_description: "Capture development retrospectives and evolve workflow skills."
+  default_prompt: "Use $development-learning to review the completed development task, update the learning index, and identify reusable principles, risks, and skill candidates."
