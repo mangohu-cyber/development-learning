@@ -5,7 +5,7 @@ description: Use when a development task, debugging session, design discussion, 
 
 # Development Learning
 
-流程版本：v0.2
+流程版本：v0.3
 
 ## Overview
 
@@ -29,9 +29,12 @@ Read `references/test-scenarios.md` when validating this skill, modifying this s
 NO LEARNING RECORD WITHOUT EVIDENCE.
 NO USER WEAKNESS CLAIM WITHOUT OBSERVED BEHAVIOR.
 NO NEW SKILL CANDIDATE WITHOUT TRIGGER CONDITIONS.
+NO EXTRA EVIDENCE WEIGHT FROM REPEATED REVIEW OF THE SAME HISTORY.
 ```
 
 If there is no evidence, do not invent a lesson. If there is only weak evidence, record it as "观察中". If the content is project-specific, do not put it in this general skill.
+
+When reviewing the same history more than once, repeated reading is not new evidence. It can only refine, correct, split, merge, downgrade, or revoke conclusions.
 
 ## Trigger Decision
 
@@ -86,6 +89,20 @@ Before writing or updating a retrospective:
 
 Skip any step and the retrospective is not reliable.
 
+## Repeat Review Anti-Overfitting Protocol
+
+Use this protocol when the requested review scope overlaps an existing review, such as the same month, same task, same exported history range, or the same source manifest.
+
+1. DECLARE: State whether this is a first review, a repeated review, or a cross-scope synthesis.
+2. COMPARE: Locate the existing review for the same scope before writing.
+3. DELTA: Separate new evidence from reinterpretation of old evidence.
+4. DEDUP: Do not count the same conversation, summary, stat, file change, or user feedback as additional frequency.
+5. COUNTERCHECK: Ask what could weaken or contradict the previous conclusion.
+6. WRITE: Prefer updating the existing review with a repeat-review section instead of creating a duplicate file for the same scope.
+7. GRADE: Mark conclusion strength as single observation, same-scope repeated observation, cross-period observation, cross-project observation, or explicit user feedback.
+
+Repeated reviews of the same evidence must not promote a skill candidate, strengthen a user weakness claim, or convert an observation into a stable pattern. Only independent new evidence can do that.
+
 Use this review template:
 
 ```markdown
@@ -114,6 +131,15 @@ Use this review template:
 
 ## 下次提醒
 后续遇到相似场景时，agent 应该如何提醒用户或约束自己。
+
+## 重复复盘校验
+- 复盘类型：首次复盘 / 重复复盘 / 跨范围总览
+- 已存在的同范围复盘：
+- 本轮新增证据：
+- 本轮只是重新解释的旧证据：
+- 未重复计权的证据：
+- 被削弱、降级或撤销的结论：
+- 结论强度：
 
 ## Skill 演化判断
 - 结论：不需要 / 候选 / 应创建 / 应优化
@@ -151,6 +177,7 @@ Do not record private speculation. Do not convert one event into a permanent use
 - You want to create a new skill from one event without explicit user instruction.
 - You are handling `复盘总览` and about to expand every review file by default.
 - You are modifying this skill without first deciding whether the problem is design gap or execution failure.
+- You are reviewing the same history again and treating repeated reading as new evidence.
 
 ## Overview Output
 
@@ -176,6 +203,8 @@ Recommend creating or improving a skill only when at least two conditions are tr
 
 If only one condition is true, record the item as "观察中".
 
+Repeated reviews of the same history do not count as independent occurrences. A skill candidate can be strengthened only by new periods, new tasks, new projects, new verification failures, or explicit user instruction.
+
 When a candidate should proceed, do not bypass skill-authoring discipline. Record the candidate first, then use the proper skill creation or skill editing workflow.
 
 ## Rationalization Prevention
@@ -188,6 +217,7 @@ When a candidate should proceed, do not bypass skill-authoring discipline. Recor
 | "This would be a useful skill, create it now." | Unless explicitly requested or supported by enough evidence, record a candidate first. |
 | "复盘总览 should show everything." | The overview shows `index.md`; expansion requires a request. |
 | "The skill failed, so change the skill." | First decide whether the skill rule is missing or the current agent ignored it. |
+| "I reviewed the same month three times, so the evidence is stronger." | Same-scope repetition is not new evidence; record only deltas, corrections, and confidence changes. |
 
 ## Self-Modification Protocol
 
@@ -211,3 +241,4 @@ Do not modify this skill for a one-off preference, a project-specific lesson, or
 | Growing SKILL.md with learning content | Keep SKILL.md to workflow rules; store learning in `development-learning`. |
 | Creating a new skill after one event | Mark as "观察中" unless enough evidence or explicit user instruction exists. |
 | Showing every review for `复盘总览` | Show the index first; expand only on request. |
+| Repeating a history review and upgrading conclusions | Same evidence cannot increase frequency or confidence; require independent new evidence. |
