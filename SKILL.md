@@ -5,7 +5,7 @@ description: Use when a development task, debugging session, design discussion, 
 
 # Development Learning
 
-流程版本：v0.3
+流程版本：v0.4
 
 ## Overview
 
@@ -103,6 +103,8 @@ Use this protocol when the requested review scope overlaps an existing review, s
 
 Repeated reviews of the same evidence must not promote a skill candidate, strengthen a user weakness claim, or convert an observation into a stable pattern. Only independent new evidence can do that.
 
+Use the repeat-review addendum only for repeated reviews or cross-scope syntheses. Do not add it to ordinary task retrospectives.
+
 Use this review template:
 
 ```markdown
@@ -132,19 +134,23 @@ Use this review template:
 ## 下次提醒
 后续遇到相似场景时，agent 应该如何提醒用户或约束自己。
 
+## Skill 演化判断
+- 结论：不需要 / 候选 / 应创建 / 应优化
+- 证据：
+- 建议：
+```
+
+Use this repeat-review addendum only when the requested scope overlaps existing evidence:
+
+```markdown
 ## 重复复盘校验
-- 复盘类型：首次复盘 / 重复复盘 / 跨范围总览
+- 复盘类型：重复复盘 / 跨范围总览
 - 已存在的同范围复盘：
 - 本轮新增证据：
 - 本轮只是重新解释的旧证据：
 - 未重复计权的证据：
 - 被削弱、降级或撤销的结论：
 - 结论强度：
-
-## Skill 演化判断
-- 结论：不需要 / 候选 / 应创建 / 应优化
-- 证据：
-- 建议：
 ```
 
 ## Evidence Rules
