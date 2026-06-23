@@ -5,7 +5,7 @@ description: Use when a development task, debugging session, design discussion, 
 
 # Development Learning
 
-流程版本：v0.4
+流程版本：v0.5
 
 ## Overview
 
@@ -74,7 +74,8 @@ Create missing directories or files before writing. Preserve existing content an
 4. Update `index.md` with only summaries and links, not full review content.
 5. Update `skill-candidates.md` when the task suggests a new or improved skill.
 6. If this skill itself changed, update `development-learning-evolution.md`.
-7. Report the written or updated paths and the main learning points.
+7. Run the retrospective quality self-check.
+8. Report the written or updated paths and the main learning points.
 
 ## Retrospective Gate Function
 
@@ -88,6 +89,30 @@ Before writing or updating a retrospective:
 6. VERIFY: Confirm `index.md`, `skill-candidates.md`, and evolution records still point to the right level of detail.
 
 Skip any step and the retrospective is not reliable.
+
+## Retrospective Quality Self-Check
+
+After writing or updating a retrospective, check these items before reporting completion:
+
+- Evidence: every reusable lesson, risk, and skill judgment points to user constraints, decisions, file changes, verification output, exported stats, or explicit feedback.
+- Labels: "暴露的问题" describes observed behavior or workflow risk, not a user trait.
+- Scope: project-specific rules are not written into this general skill.
+- Dedup: repeated or cross-scope reviews do not count old evidence again.
+- Index: `index.md` contains only stable summaries and pointers, not full review detail.
+- Candidates: `skill-candidates.md` records state, evidence, boundary, and next action without bypassing skill-authoring discipline.
+- Evolution: changes to this skill itself are recorded in `development-learning-evolution.md`.
+
+If any item fails, fix the learning files before reporting completion.
+
+## Index Capacity Rules
+
+Keep `index.md` scannable. It is an overview, not a second review archive.
+
+- Keep stable principles, active risks, review links, skill candidate summaries, and current boundaries.
+- Move detailed evidence, long explanations, and historical narrative into `reviews\*.md`.
+- Keep old or revoked candidate details in `skill-candidates.md`, not in `index.md`.
+- When a section grows too long, merge similar bullets and keep the latest stable wording.
+- Do not expand all review details into `index.md` for `复盘总览`.
 
 ## Repeat Review Anti-Overfitting Protocol
 
