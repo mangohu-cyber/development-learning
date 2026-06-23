@@ -34,52 +34,17 @@
 
 只有重复复盘或跨范围总览才追加“重复复盘校验”。普通任务复盘不需要该小节。
 
-## 质量门禁
+## 详细规则
 
-写入复盘前，agent 必须确认：
-
-- 是否有明确任务、讨论、决策或失败点可复盘。
-- 是否有来自用户约束、文件变更、验证结果或明确反馈的证据。
-- 每条内容属于思想、风险、普通细节还是 skill 候选。
-- 是否已经移除聊天流水账、主观猜测和人格标签。
-
-没有证据时不写学习结论；证据弱时标记为“观察中”。
-
-写入复盘后，agent 必须做一次质量自检：
-
-- 每条思想、风险和 skill 判断都有证据。
-- “暴露的问题”描述的是可观察行为或流程风险，不是人格标签。
-- 项目专用规则没有写进通用 skill。
-- 重复复盘没有重复计权。
-- `index.md` 只保留稳定摘要和链接，不复制完整复盘。
-- `skill-candidates.md` 记录状态、证据、边界和下一步。
-- 修改本 skill 时已更新 `development-learning-evolution.md`。
-
-`index.md` 必须保持可扫读。长期细节应留在 `reviews\*.md` 或 `skill-candidates.md`，不要把总览变成第二份复盘全集。
-
-## 重复复盘防过拟合
-
-当同一月份、同一任务、同一段历史或同一个导出 manifest 被再次复盘时，agent 必须先说明这是重复复盘或跨范围总览。
-
-重复复盘只能做这些事：
-
-- 补充新增证据
-- 修正旧结论
-- 合并或拆分旧结论
-- 降级或撤销旧结论
-- 输出跨范围总览
-
-重复阅读同一批历史不能增加证据权重，不能把观察中事项升级为稳定缺点，也不能把 skill 候选直接推进为应创建。
-
-重复复盘输出必须包含：
+写入或更新复盘前，agent 必须读取：
 
 ```text
-新增证据
-重新解释的旧证据
-未重复计权的证据
-被削弱、降级或撤销的结论
-结论强度
+<AGENTS_HOME>\skills\development-learning\references\review-rules.md
 ```
+
+详细规则集中维护在 `review-rules.md`，包括质量门禁、质量自检、索引容量、重复复盘防过拟合、复盘模板、证据规则、skill 候选规则、红旗和反合理化表。
+
+`index.md` 必须保持可扫读。长期细节应留在 `reviews\*.md` 或 `skill-candidates.md`，不要把总览变成第二份复盘全集。
 
 ## 数据位置
 
@@ -128,4 +93,10 @@
 
 ```text
 <AGENTS_HOME>\skills\development-learning\references\test-scenarios.md
+```
+
+修改学习数据结构或检查索引、候选项一致性时，运行：
+
+```bash
+python <AGENTS_HOME>\skills\development-learning\scripts\validate_development_learning.py
 ```
