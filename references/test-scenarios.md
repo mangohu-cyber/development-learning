@@ -13,7 +13,7 @@
 ```
 
 期望行为：
-- 读取 `<AGENTS_HOME>\development-learning\index.md`。
+- 读取 `<AGENTS_HOME>\data\development-learning\index.md`。
 - 展示思想学习论、开发风险、复盘记录和 skill 候选。
 - 不默认展开 `reviews\` 下的完整复盘。
 

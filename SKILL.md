@@ -14,7 +14,7 @@ Use this skill to turn development work into evidence-based learning records. Ca
 Learning data lives under the agent's personal data root:
 
 ```text
-<AGENTS_HOME>\development-learning\
+<AGENTS_HOME>\data\development-learning\
 ```
 
 Resolve `<AGENTS_HOME>` from the current agent environment. For Codex-style personal skills, it is usually the parent directory that contains `skills\`.
@@ -48,7 +48,7 @@ If the user says "优化 development-learning", "修改这个复盘 skill", or r
 Maintain these files:
 
 ```text
-<AGENTS_HOME>\development-learning\
+<AGENTS_HOME>\data\development-learning\
   index.md
   skill-candidates.md
   development-learning-evolution.md

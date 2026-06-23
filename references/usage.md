@@ -46,7 +46,7 @@
 ## 数据位置
 
 ```text
-<AGENTS_HOME>\development-learning\
+<AGENTS_HOME>\data\development-learning\
   index.md
   skill-candidates.md
   development-learning-evolution.md

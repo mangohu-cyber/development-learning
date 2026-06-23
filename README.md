@@ -51,7 +51,7 @@ Use it after:
 The skill stores learning data outside the skill repository:
 
 ```text
-<AGENTS_HOME>/development-learning/
+<AGENTS_HOME>/data/development-learning/
 ```
 
 Expected data files:
